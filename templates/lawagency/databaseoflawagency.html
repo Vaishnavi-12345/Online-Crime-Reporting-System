@@ -1,0 +1,40 @@
+{% extends 'defaultAdmin/base.html' %}
+
+{% block title %}
+    Database of Law Agency
+{% endblock %}
+
+{% block headers %}
+    <br>
+    <br>
+    <div align="center">
+    <h3 style="border: 4px solid DodgerBlue; padding-bottom: 10px; padding-top: 8px">Law Agency:</h3>
+    </div>
+{% endblock %}
+
+{% block database %}
+    <br>
+    <br>
+    <div align="center">
+    <table>
+    <thead>
+        <tr align="center" style="border: 2px solid DodgerBlue;">
+            <th><h4>&nbsp;User ID</h4></th>
+            <th><h4>Name</h4></th>
+            <th><h4>Email Address&nbsp;&nbsp;</h4></th>
+            <th><h4>Agency Branch&nbsp;</h4></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for lawlist in lawlist %}
+            <tr align="center" style="border: 2px solid DodgerBlue">
+                <td><strong>{{ lawlist.user_id }}</strong></td>
+                <td><strong>{{ lawlist.name }}</strong></td>
+                <td><strong>{{ lawlist.email }}</strong></td>
+                <td><strong>{{ lawlist.agency_branch }}</strong></td>
+            </tr>
+        {% endfor %} <br>
+    </tbody>
+    </table>
+    </div>
+{% endblock %}

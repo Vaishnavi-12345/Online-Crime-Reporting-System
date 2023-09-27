@@ -1,0 +1,18 @@
+{% extends 'defaultAdmin/base.html' %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+
+        {% load crispy_forms_tags %}
+        {% block contents %}
+            <div style="padding-left: 40%; padding-right: 40%;">
+{#            <form method="POST">#}
+{#                {% csrf_token %}#}
+{#                {{ form|crispy }}#}
+                Profile
+            </form>
+
+            </div>
+        {% endblock %}
